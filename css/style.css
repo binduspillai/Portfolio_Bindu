@@ -167,6 +167,7 @@ a {
   }
   
   /* Timeline card inside .about-text */
+  
   .education-timeline.highlight-card {
     background-color: #fff;
     padding: 20px;
@@ -174,6 +175,20 @@ a {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     margin-top: 2rem;
     text-align: left;
+    /* Elevation + subtle blue glow */
+  box-shadow:
+  0 8px 20px rgba(0, 0, 0, 0.15),      /* soft elevation */
+  0 0 8px rgba(51, 161, 201, 0.6);      /* peacock blue glow */
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+/* Hover state */
+.highlight-card:hover {
+transform: translateY(-8px);
+box-shadow:
+  0 12px 24px rgba(0, 0, 0, 0.2),      /* stronger elevation */
+  0 0 20px rgba(51, 161, 201, 0.8); 
   }
   .education-timeline.highlight-card h3 {
     color: #0077cc;
@@ -207,17 +222,30 @@ a {
   .about-highlights {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 110px;
     gap: 20px;
   }
   
+
   /* Highlight-card base style */
   .highlight-card {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    /* Elevation + subtle blue glow */
+  box-shadow:
+  0 8px 20px rgba(0, 0, 0, 0.15),      /* soft elevation */
+  0 0 8px rgba(51, 161, 201, 0.6);      /* peacock blue glow */
+text-align: center;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover state */
+.highlight-card:hover {
+transform: translateY(-8px);
+box-shadow:
+  0 12px 24px rgba(0, 0, 0, 0.2),      /* stronger elevation */
+  0 0 20px rgba(51, 161, 201, 0.8); 
   }
   .highlight-card:hover {
     transform: translateY(-5px);
