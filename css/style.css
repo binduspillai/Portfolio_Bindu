@@ -46,14 +46,14 @@ a {
 }
 
 .navbar nav a {
-  color: #333;
+  color: #1CA9A6;
   text-decoration: none;
   margin: 0 15px;
   transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #1CA9A6;
+  color: #271ed4;
 }
 
 /* Hero Section */
@@ -64,31 +64,37 @@ a {
   background-color: #f0f8ff;
 }
 
+/* 1. Ensure hero-content stays on one line & children stretch */
 .hero-content {
   display: flex;
-  flex-wrap: wrap;
+  align-items: stretch;   /* both columns match heights */
+  flex-wrap: nowrap;      /* no wrapping onto a new line */
   gap: 40px;
-  width: 100%;
-  align-items: stretch;               /* ← ensure hero-text & hero-image are same height */
+}
+
+/* 2. Make the image container inherit that stretched height */
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  height: 100%;           /* fill the flex-item height */
+  overflow: hidden;       /* crop any overflow from the img */
+  display: flex;
+  justify-content: flex-end; /* push image to right edge */
+  align-items: center; 
+}
+
+/* 3. Fill & crop the img */
+.hero-image img {
+  width: 40%;            /* maintain aspect ratio */
+  height: 40%;           /* match parent’s full height */
+  object-fit: cover;      /* scale/crop without distortion */
+  border-radius: 12px;
+  transform-origin: right center; 
 }
 
 .hero-text {
   flex: 1;
-  min-width: 300px;
-}
-
-.hero-image {
-  flex: 1;
-  min-width: 300px;
-  position: relative;
-  overflow: hidden;                   /* crop any overflow */
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;                       /* ← fill the parent’s full height */
-  object-fit: cover;                  /* ← crop/rescale without distortion */
-  border-radius: 12px;
+  min-width: 500px;
 }
 
 /* Buttons */
@@ -135,36 +141,114 @@ a {
   color: #555;
 }
 
-/* About Section */
-.about-section {
-  padding: 60px 0;
-}
-
-.about-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.about-text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.about-highlights {
-  flex: 1;
-  min-width: 300px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.highlight-card {
-  background-color: #e6f2ff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
+/* ------------------------------
+   About Section: Two-Column Layout
+   ------------------------------ */
+   .about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: start;
+    margin: 4rem 0; /* optional spacing around the section */
+    margin-left: 90px;
+  }
+  
+  /* Left column text */
+  .about-text .section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+  }
+  .about-text p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  /* Timeline card inside .about-text */
+  .education-timeline.highlight-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-top: 2rem;
+    text-align: left;
+  }
+  .education-timeline.highlight-card h3 {
+    color: #0077cc;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+  }
+  .education-timeline.highlight-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+  }
+  .education-timeline.highlight-card ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 0.5rem;
+  }
+  .education-timeline.highlight-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #0077cc;
+    font-weight: bold;
+  }
+  .education-timeline.highlight-card p {
+    color: #444;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+  
+  /* Right column: highlights grid */
+  .about-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  /* Highlight-card base style */
+  .highlight-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+  .highlight-card .icon {
+    font-size: 2rem;
+    color: #0077cc;
+    margin-bottom: 0.75rem;
+  }
+  .highlight-card h4 {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #0077cc;
+  }
+  .highlight-card p {
+    margin: 0;
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  /* Responsive: stack columns on narrow viewports */
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+    .about-highlights {
+      grid-template-columns: 1fr;
+    }
+  }
 
 /* Skills Section */
 .skill-grid {
