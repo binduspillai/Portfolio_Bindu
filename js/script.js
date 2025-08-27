@@ -1,16 +1,21 @@
-// Fade-in sections when they come into view
-const faders = document.querySelectorAll('.fade-section');
-
-const appearOptions = { threshold: 0.2 };
-
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('show');
-    appearOnScroll.unobserve(entry.target);
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
   });
-}, appearOptions);
+});
 
-faders.forEach(fader => { appearOnScroll.observe(fader); });
+// Fade-in on scroll
+const fadeElements = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
 
-// Smooth scrolling is handled by CSS (scroll-behavior: smooth)
+fadeElements.forEach(el => observer.observe(el));

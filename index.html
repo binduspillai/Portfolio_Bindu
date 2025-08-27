@@ -3,107 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bindu S Pillai | Portfolio</title>
+  <title>Bindu | Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
   <!-- Navbar -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero -->
-  <header id="hero" class="hero fade-section">
-    <h1>Bindu Suresh Pillai</h1>
-    <p>Principal Clinical Insight Analyst | Data Engineer | AI-driven Problem Solver</p>
-    <a href="#projects" class="btn">View My Work</a>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Bindu</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- About -->
-  <section id="about" class="box fade-section">
-    <h2>About Me</h2>
-    <div class="two-column">
-      <div>
-        <img src="images/profile.jpg" alt="Bindu Profile" class="profile-img">
-      </div>
-      <div>
+  <!-- About Section -->
+  <section id="about" class="fade-in">
+    <div class="container about">
+      <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+      <div class="about-text">
+        <h2 class="section-title">About Me</h2>
         <p>
-          I am a highly skilled professional with proven expertise in <b>Databricks, Python, DBT, and Snowflake</b>, 
-          experienced in <b>Retail, Banking, Insurance, and Life Sciences</b>. 
-          My unique value lies in <b>bridging business needs and technology</b>, 
-          building robust data pipelines, and driving <b>data-driven decision making</b>.
+          25+ years of progressive journey from education to data engineering leadership across global markets.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="box fade-section">
-    <h2>Core Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-box">Python</div>
-      <div class="skill-box">SQL / PySpark</div>
-      <div class="skill-box">Snowflake</div>
-      <div class="skill-box">Databricks</div>
-      <div class="skill-box">DBT</div>
-      <div class="skill-box">AWS / Azure</div>
-      <div class="skill-box">Power BI / Tableau</div>
-      <div class="skill-box">DevOps (Jenkins, Docker, CI/CD)</div>
+  <!-- Professional Experience Section -->
+  <section id="experience" class="fade-in">
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      
+      <!-- Role 1 -->
+      <div class="experience-card">
+        <div class="exp-header">
+          <h3>Principal Clinical Insight Analyst</h3>
+          <span class="exp-date">Dec 2024 - Current</span>
+        </div>
+        <p class="company">Cytel Inc Ltd • Hyderabad, India <span class="tag">USA CRO</span></p>
+        <p>
+          Leading development and validation of datasets for clinical trials, analyzing large datasets to uncover trends and insights.
+        </p>
+        <h4>Key Achievements</h4>
+        <ul>
+          <li>Lead cross-functional teams in clinical data analysis</li>
+          <li>Translate complex data into meaningful business insights</li>
+          <li>Develop dashboards and visualizations for complex findings</li>
+          <li>Advocate for data-driven decision making across organization</li>
+        </ul>
+        <h4>Technologies & Skills</h4>
+        <div class="tags">
+          <span>Clinical SAS</span><span>Python</span><span>Tableau</span>
+          <span>Data Analysis</span><span>Clinical Trials</span>
+        </div>
+      </div>
+
+      <!-- Role 2 -->
+      <div class="experience-card">
+        <div class="exp-header">
+          <h3>Senior Data Engineer</h3>
+          <span class="exp-date">Mar 2021 - Nov 2024</span>
+        </div>
+        <p class="company">Tata Consultancy Services • London, UK <span class="tag">UK Retail Client</span></p>
+        <p>
+          Provided technical and people leadership for 6+ team of engineers, responsible for stakeholder communication and hands-on engineering tasks.
+        </p>
+        <h4>Key Achievements</h4>
+        <ul>
+          <li>Migrated 7+ complex Ab-initio pipelines to DBT</li>
+          <li>Mentored junior/graduate Data Engineers</li>
+          <li>Led Product, Promotions and Pricing data transformation in Snowflakes</li>
+          <li>Developed data models to resolve complex data challenges</li>
+        </ul>
+        <h4>Technologies & Skills</h4>
+        <div class="tags">
+          <span>DBT</span><span>Snowflakes</span><span>Airflow</span>
+          <span>Docker</span><span>Kubernetes</span><span>Python</span>
+          <span>SQL</span><span>Jenkins</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Experience -->
-  <section id="experience" class="box fade-section">
-    <h2>Professional Experience</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>Cytel Inc | Principal Clinical Insight Analyst <span>(Dec 2024 – Present)</span></h3>
-        <p>Lead dataset development, advanced analytics, dashboards, and insights for clinical trials.</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Tata Consultancy Services, London | Senior Data Engineer <span>(2021 – 2024)</span></h3>
-        <p>Managed 6+ engineers, migrated complex pipelines to DBT/Snowflake, mentored juniors.</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Tata Consultancy Services, Bangalore | Data Engineer <span>(2018 – 2021)</span></h3>
-        <p>Handled SAS → Python migrations, AWS data pipelines, and Airflow orchestration.</p>
-      </div>
-      <div class="timeline-item">
-        <h3>TCS | Senior Analyst/Scientist <span>(2017 – 2018)</span></h3>
-        <p>Built statistical sampling tools, automated audit process, and designed BI dashboards.</p>
-      </div>
+  <!-- Contact Section -->
+  <section id="contact" class="fade-in">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p>Email: <a href="mailto:bindu@example.com">bindu@example.com</a></p>
     </div>
   </section>
-
-  <!-- Projects -->
-  <section id="projects" class="box fade-section">
-    <h2>Key Projects</h2>
-    <div class="projects">
-      <div class="project-card"><h3>Clinical Trial Insights</h3><p>Placeholder description</p></div>
-      <div class="project-card"><h3>Retail Pricing Pipeline</h3><p>Placeholder description</p></div>
-      <div class="project-card"><h3>Snowflake DBT Migration</h3><p>Placeholder description</p></div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="box fade-section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:pillaisbindu@gmail.com">pillaisbindu@gmail.com</a></p>
-    <p>Phone: +91 8125019982 | +44 7766940378</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/binduspillai" target="_blank">linkedin.com/in/binduspillai</a></p>
-  </section>
-
-  <footer>
-    <p>© 2025 Bindu Suresh Pillai | Portfolio</p>
-  </footer>
 
   <script src="js/script.js"></script>
 </body>
