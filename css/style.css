@@ -278,39 +278,87 @@ box-shadow:
     }
   }
 
-/* Skills Section */
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  padding: 60px 0;
-}
+/* ---------------------------------
+   Skills Section
+   --------------------------------- */
+   .skill-section {
+    padding: 60px 0;
+    background-color: #f3f8f5b3;
+  }
+  
+  .skill-section .section-title {
+    text-align: center;
+    color: #0077cc;
+    margin-bottom: 30px;
+   
+  }
+  .skill-section .section-subtitle {
+    text-align: center;
+    color: #18191a;
+    margin-bottom: 30px;
+    font-size: 0.7rem;
+  }
+  
+  /* Grid: two cards per row */
+  .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  /* Individual card styling */
+  .skill-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
 
-.skill-box {
-  background-color: #f0f8ff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.skill-box h3 {
-  margin-bottom: 10px;
-  color: #0077cc;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.tags span {
-  background-color: #0077cc;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 14px;
-}
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08),
+                0 0 8px rgba(0,128,160,0.2); /* subtle peacock-blue glow */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    font-size: 0.7rem;;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12),
+                0 0 12px rgba(0,128,160,0.4);
+  }
+  
+  .skill-card h3 {
+    font-size: 0.875rem;       /* larger size to match screenshot */
+    font-weight: 600;        /* semi-bold for emphasis */
+    color: var(--peacock);
+    margin-bottom: 1rem;
+  }
+  .category-label  i {
+    font-size: 0.9rem;
+    margin-right: 0.4rem;
+    color: #555;
+  }
+  /* Badge-style tags inside each card */
+  .skill-card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .skill-card .tags span {
+    background-color: #224be0;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.6rem;
+  }
+  
+  /* Responsive: single column on small screens */
+  @media (max-width: 768px) {
+    .skill-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
 
 /* Experience Section */
 .experience-card {
