@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bindu | Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
   <!-- Navbar -->
@@ -13,99 +14,171 @@
       <h1 class="logo">Bindu S Pillai</h1>
       <nav>
         <a href="#about">About</a>
-        <a
+        <a href="#skill">Skill</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="fade-in">
-    <div class="container about">
-      <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
-      <div class="about-text">
-        <h2 class="section-title">About Me</h2>
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section fade-in visible">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Bindu S Pillai</h1>
+        <h3>Principal Clinical Insight Analyst & Data Engineering Leader</h3>
         <p>
-          My professional journey began in 1999 as an educator, where I spent 7 years teaching Mathematics and Computer Science in various schools, engineering colleges, and polytechnics in Mumbai. This foundational experience in education developed my ability to explain complex concepts clearly and mentor others.
-
-In 2008, I transitioned into technology, bringing my analytical mindset and teaching skills into the data engineering field. Today, as a Principal Clinical Insight Analyst at Cytel Inc., I lead the development and validation of datasets for clinical trials, analyzing large datasets to uncover trends and insights that drive data-driven decision making.
-
-Throughout my career, I've successfully bridged the gap between technical teams and business stakeholders, providing end-to-end engineering solutions using various Data Engineering tools. My expertise spans across Databricks, Python, DBT, and Snowflakes, with deep experience in Retail, Banking & Insurance, and Life Science domains.
-
-My unique combination of educational background and technical expertiseenables me to not only deliver complex data solutions but also effectively mentor teams and communicate insights across all organizational levels.
+          Highly skilled in Databricks, Python, DBT and Snowflakes with a proven track record in managing complex projects and ensuring successful client engagements.
         </p>
+        <div class="hero-contact">
+          <p><strong>Email:</strong> pillaisbindu@gmail.com</p>
+          <p><strong>Phone:</strong> +91 8125019982</p>
+          <p><strong>Location:</strong> Hyderabad, India</p>
+        </div>
+        <div class="hero-buttons">
+          <a href="resume.pdf" class="btn">Download Resume</a>
+          <a href="https://linkedin.com/in/yourlinkedin" target="_blank" class="btn-outline">
+            <i class="fab fa-linkedin"></i> LinkedIn Profile
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/profile.jpg" alt="Bindu Profile Picture" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <!-- Professional Experience Section -->
-   
-  <section id="experience" class="fade-in">
-    <div class="container">
-      <h2 class="section-title">Professional Experience</h2>
-      <h3 class="section-title_1">25+ years of progressive journey from education to data engineering leadership across global markets</h3>
-      
-      <!-- Role 1 -->
-      <div class="experience-card">
-        
-        <div class="exp-header">
-          <h3>Principal Clinical Insight Analyst</h3>
-          <span class="exp-date">Dec 2024 - Current</span>
-        </div>
-        <p class="company">Cytel Inc Ltd • Hyderabad, India <span class="tag">USA CRO</span></p>
-        <p>
-          Leading development and validation of datasets for clinical trials, analyzing large datasets to uncover trends and insights.
-        </p>
-        <h4>Key Achievements</h4>
-        <ul>
-          <li>Lead cross-functional teams in clinical data analysis</li>
-          <li>Translate complex data into meaningful business insights</li>
-          <li>Develop dashboards and visualizations for complex findings</li>
-          <li>Advocate for data-driven decision making across organization</li>
-        </ul>
-        <h4>Technologies & Skills</h4>
-        <div class="tags">
-          <span>Clinical SAS</span><span>Python</span><span>Tableau</span>
-          <span>Data Analysis</span><span>Clinical Trials</span>
+  <!-- About Me Section -->
+  <section id="about" class="about-section fade-in visible">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h2 class="section-title">About Me</h2>
+        <p>My professional journey began in 1999 as an educator, where I spent 7 years teaching Mathematics and Computer Science in various schools, engineering colleges, and polytechnics in Mumbai. This foundational experience in education developed my ability to explain complex concepts clearly and mentor others.</p>
+        <p>In 2008, I transitioned into technology, bringing my analytical mindset and teaching skills into the data engineering field. Today, as a Principal Clinical Insight Analyst at Cytel Inc., I lead the development and validation of datasets for clinical trials, analyzing large datasets to uncover trends and insights that drive data-driven decision making.</p>
+        <p>Throughout my career, I've successfully bridged the gap between technical teams and business stakeholders, providing end-to-end engineering solutions using various Data Engineering tools. My expertise spans across Databricks, Python, DBT, and Snowflakes, with deep experience in Retail, Banking & Insurance, and Life Science domains.</p>
+        <p>My unique combination of educational background and technical expertise enables me to not only deliver complex data solutions but also effectively mentor teams and communicate insights across all organizational levels.</p>
+
+        <div class="education">
+          <h3>Education & Career Timeline</h3>
+          <ul>
+            <li><strong>1999–2008:</strong> Teaching Career (Mumbai)</li>
+            <li><strong>2008–Present:</strong> Data Engineering Leadership</li>
+          </ul>
+          <p>
+            <strong>M.Tech Atmospheric Science</strong> – Cochin University (First Rank)<br />
+            <strong>M.Sc Mathematics</strong> – Kerala University<br />
+            <strong>B.Ed Mathematics</strong> – Kerala University
+          </p>
         </div>
       </div>
 
-      <!-- Role 2 -->
+      <div class="about-highlights">
+        <div class="highlight-card">
+          <h4>25+ Years Experience</h4>
+          <p>Extensive journey from teaching to data engineering leadership across global markets.</p>
+        </div>
+        <div class="highlight-card">
+          <h4>Teaching Background</h4>
+          <p>7 years teaching Mathematics & Computer Science in schools and colleges across Mumbai.</p>
+        </div>
+        <div class="highlight-card">
+          <h4>Team Leadership</h4>
+          <p>Led cross-functional teams, mentored engineers, and managed stakeholder communications.</p>
+        </div>
+        <div class="highlight-card">
+          <h4>Data Engineering</h4>
+          <p>Expert in Databricks, DBT, Snowflake, and Python for scalable data solutions.</p>
+        </div>
+        <div class="highlight-card">
+          <h4>Global Impact</h4>
+          <p>Delivered solutions for clients in the UK, USA, and India across retail, banking, and life sciences.</p>
+        </div>
+        <div class="highlight-card">
+          <h4>Academic Excellence</h4>
+          <p>First Rank in M.Tech Atmospheric Science, plus advanced degrees in Mathematics and Education.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skill" class="fade-in visible">
+    <div class="container skill-grid">
+      <h2 class="section-title">Skills</h2>
+      <p>Comprehensive categorized skill showcase with badges.</p>
+
+      <div class="skill-card">
+        <h3>Programming Languages</h3>
+        <div class="tags">
+          <span>Python</span><span>SQL</span><span>R</span><span>SAS</span><span>Shell Scripting</span><span>PL/SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Data Engineering</h3>
+        <div class="tags">
+          <span>DBT</span><span>Airflow</span><span>Databricks</span><span>Snowflakes</span><span>Teradata</span><span>Data Vault</span><span>Informatica</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Cloud & DevOps</h3>
+        <div class="tags">
+          <span>AWS</span><span>Azure</span><span>Jenkins</span><span>Docker</span><span>Kubernetes</span><span>Terraform</span><span>Git</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Data Visualization</h3>
+        <div class="tags">
+          <span>Tableau</span><span>Power BI</span><span>Qlik Sense</span><span>TIBCO Spotfire</span><span>Power Query</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Specialized Tools</h3>
+        <div class="tags">
+          <span>Clinical SAS</span><span>CDISC SDTM</span><span>ADaM</span><span>Control-M</span><span>AWS EMR</span><span>Informatica</span><span>Informat Architect</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Leadership & Management</h3>
+        <div class="tags">
+          <span>Team Leadership</span><span>Management</span><span>PRINCE2</span><span>Lean Six Sigma</span><span>Mentoring</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="fade-in visible">
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      <h3 class="section-title_1">25+ years of progressive journey from education to data engineering leadership across global markets</h3>
+
+      <div class="experience-card">
+        <div class="exp-header">
+          <h3>Principal Clinical Insight Analyst</h3>
+          <span class="exp-date">Dec 2022 – Present</span>
+        </div>
+        <p class="company">Cytel Inc Ltd • Hyderabad, India <span class="tag">USA CRO</span></p>
+        <p>Leading development and validation of datasets for clinical trials, analyzing large datasets to uncover trends and insights.</p>
+      </div>
+
       <div class="experience-card">
         <div class="exp-header">
           <h3>Senior Data Engineer</h3>
-          <span class="exp-date">Mar 2021 - Nov 2024</span>
+          <span class="exp-date">Mar 2021 – Nov 2022</span>
         </div>
         <p class="company">Tata Consultancy Services • London, UK <span class="tag">UK Retail Client</span></p>
-        <p>
-          Provided technical and people leadership for 6+ team of engineers, responsible for stakeholder communication and hands-on engineering tasks.
-        </p>
-        <h4>Key Achievements</h4>
-        <ul>
-          <li>Migrated 7+ complex Ab-initio pipelines to DBT</li>
-          <li>Mentored junior/graduate Data Engineers</li>
-          <li>Led Product, Promotions and Pricing data transformation in Snowflakes</li>
-          <li>Developed data models to resolve complex data challenges</li>
-        </ul>
-        <h4>Technologies & Skills</h4>
-        <div class="tags">
-          <span>DBT</span><span>Snowflakes</span><span>Airflow</span>
-          <span>Docker</span><span>Kubernetes</span><span>Python</span>
-          <span>SQL</span><span>Jenkins</span>
-        </div>
+        <p>Provided technical and people leadership for 6+ engineers, responsible for stakeholder communication and hands-on engineering tasks.</p>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="fade-in">
+  <section id="contact" class="fade-in visible">
     <div class="container">
       <h2 class="section-title">Contact</h2>
-      <p>Email: <a href="mailto:bindu@example.com">bindu@example.com</a></p>
-    </div>
-  </section>
-
-  <script src="js/script.js"></script>
-</body>
-</html>
+      <p>Email: <a href="mailto:pillaisbindu@gmail.com">pillaisbindu
