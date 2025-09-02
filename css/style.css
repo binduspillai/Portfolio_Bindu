@@ -130,9 +130,9 @@ a {
 
 /* Section Titles */
 .section-title {
-  font-size: 28px;
+  font-size: 24px;
   margin-bottom: 20px;
-  color: #0077cc;
+  color: #090e12;
 }
 
 .section-title_1 {
@@ -155,10 +155,19 @@ a {
   
   /* Left column text */
   .about-text .section-title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #333;
-    text-align: center;
+    position: relative;      /* establish a positioning context */
+    font-size: 1.5rem;         /* adjust to your liking */
+    font-weight: bold;
+    text-align: center;      /* center the text itself */
+    margin: 2rem 0;          /* vertical spacing */
+  }
+  .section-title::after {
+    content: "";
+    display: block;          /* so width & height apply */
+    width: 50px;             /* shorter than the text */
+    height: 4px;             /* thickness of the line */
+    background-color: #27ae60; /* peacock-green (or your chosen hex) */
+    margin: 0.5em auto 0;    /* 0.5em gap, auto–center the bar */
   }
   .about-text p {
     color: #555;
@@ -258,8 +267,9 @@ box-shadow:
   }
   .highlight-card h4 {
     margin: 0.5rem 0;
-    font-size: 1.1rem;
-    color: #0077cc;
+    font-size: .885rem;
+    color: #1273b9;
+    font-family: 'Times New Roman', Times, serif;
   }
   .highlight-card p {
     margin: 0;
