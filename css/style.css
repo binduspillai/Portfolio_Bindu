@@ -85,7 +85,7 @@ a {
 
 /* 3. Fill & crop the img */
 .hero-image img {
-  width: 60%;            /* maintain aspect ratio */
+  width: 40%;            /* maintain aspect ratio */
   height: 40%;           /* match parent’s full height */
   object-fit: cover;      /* scale/crop without distortion */
   border-radius: 12px;
@@ -294,9 +294,11 @@ box-shadow:
   }
   .skill-section .section-subtitle {
     text-align: center;
-    color: #18191a;
     margin-bottom: 30px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
+    color: #212121;
+    font-weight: 400;
+    font-family: "Roboto", "Helvetica Neue"
   }
   
   /* Grid: two cards per row */
@@ -532,13 +534,21 @@ box-shadow:
 }
 
 .section-title1 {
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 2rem;
-  color: #333;
+  color: #212121;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica Neue"
 }
-
+.section-title {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 2rem;
+  color: #0077cc;
+}
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -563,12 +573,12 @@ box-shadow:
 }
 
 /* Color Variants */
-.project-card.blue   { background-color: #e7f1ff; border-left: 4px solid #007bff; }
-.project-card.green  { background-color: #e6f9e6; border-left: 4px solid #28a745; }
-.project-card.purple { background-color: #f4e6ff; border-left: 4px solid #6f42c1; }
-.project-card.yellow { background-color: #fff8e1; border-left: 4px solid #ffc107; }
-.project-card.teal   { background-color: #e0f7fa; border-left: 4px solid #00acc1; }
-.project-card.orange { background-color: #fff3e0; border-left: 4px solid #fb8c00; }
+.project-card.blue   { background-color: #e7f1ff; border-left: 3px solid #007bff; }
+.project-card.green  { background-color: #e6f9e6; border-left: 3px solid #28a745; }
+.project-card.purple { background-color: #f4e6ff; border-left: 3px solid #6f42c1; }
+.project-card.yellow { background-color: #fff8e1; border-left: 3px solid #ffc107; }
+.project-card.teal   { background-color: #e0f7fa; border-left: 3px solid #00acc1; }
+.project-card.orange { background-color: #fff3e0; border-left: 3px solid #fb8c00; }
 
 /* Fade-in / Slide-up Animation */
 @keyframes fadeInUp {
@@ -796,3 +806,280 @@ box-shadow:
     grid-template-columns: 1fr;
   }
 }
+/* ==========================================================================
+   Let’s Connect Contact Section
+   ========================================================================== */
+
+/* Section Wrapper */
+.contact-section {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+/* Section Title */
+.contact-section .section-title {
+  text-align: center;
+  color: #0077cc;
+  margin-bottom: 40px;
+  font-size: 1.75rem;
+}
+
+/* Two-column layout on desktop, stacks on mobile */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+.section-subtitle {
+  text-align: center;
+  color: #212121;
+  font-weight: 400;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  font-family: "Roboto", "Helvetica Neue"
+}
+
+/* ==========================================================================
+   Get In Touch Column
+   ========================================================================== */
+
+/* Column Heading */
+.contact-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+/* Remove default list styling */
+.contact-info .info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each item as its own card */
+.contact-info .info-list li {
+  background-color: #E0F7FA;              /* light peacock blue */
+  padding: 16px;                           /* inner spacing */
+  border-radius: 8px;                      /* rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* subtle elevation */
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;                     /* space between cards */
+}
+
+.contact-info .info-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Icon styling */
+.contact-info .info-list li i {
+  margin-right: 12px;
+  color: #0077cc;
+  font-size: 1.1rem;
+}
+
+/* Link styling */
+.contact-info .info-list li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-info .info-list li a:hover {
+  color: #0077cc;
+}
+
+
+/* ==========================================================================
+   Send a Message Column
+   ========================================================================== */
+
+/* Column Heading */
+.contact-form h3 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+/* Form layout */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.contact-form label {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Inputs & textarea */
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+/* Focus state */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 4px rgba(0, 119, 204, 0.3);
+}
+
+/* Send button */
+.send-btn {
+  margin-top: 20px;
+  padding: 12px 0;
+  background-color: #0077cc;
+  color: #fff;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #005fa3;
+}
+
+
+/* ==========================================================================
+   Responsive Tweaks
+   ========================================================================== */
+@media (max-width: 480px) {
+  .contact-form label {
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+}
+
+
+/* ==========================================================================
+   Footer Section
+   ========================================================================== */
+   .footer-section {
+    background-color: #222;
+    color: #ddd;
+    padding: 60px 0 30px;
+  }
+  
+  .footer-section a {
+    color: #1ca9a6;            /* peacock blue accent */
+    text-decoration: none;
+  }
+  .footer-section a:hover {
+    color: #fff;
+  }
+  
+  /* Container + Grid */
+  .footer-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Column Headings */
+  .footer-col h3,
+  .footer-col h4 {
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  /* Column 1 Styles */
+  .footer-logo {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .footer-tagline {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  .footer-location i {
+    margin-right: 8px;
+    color: #1ca9a6;
+  }
+  .footer-location {
+    font-size: 0.95rem;
+  }
+  
+  /* Quick Links & Expertise */
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-links li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+  .footer-links li a {
+    transition: color 0.2s;
+  }
+  
+  /* Connect Column */
+  .footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+  }
+  .footer-contact li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+  .footer-contact li i {
+    margin-right: 8px;
+    color: #1ca9a6;
+  }
+  
+  /* Social Icons */
+  .social-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+  .social-links a {
+    font-size: 1.25rem;
+    display: inline-block;
+    transition: color 0.2s;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    border-top: 1px solid #444;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777;
+  }
+  .footer-bottom p {
+    margin: 0.25rem 0;
+  }
+  
+  /* Responsive Touch-ups */
+  @media (max-width: 600px) {
+    .footer-tagline {
+      font-size: 0.9rem;
+    }
+  }
+  
